@@ -9,3 +9,4 @@
          --> cookies-parser
          --> cloudinary
          --> socketio
+         --> nodemon -D  (dev dependies)
