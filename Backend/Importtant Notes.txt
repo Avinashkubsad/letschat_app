@@ -1,0 +1,11 @@
+1. create new nodejs project
+   npm init -y
+   install dependies 
+         --> Express
+         --> Mongoose
+         --> dot env
+         --> jsonswebtoken
+         --> bcryptjs
+         --> cookies-parser
+         --> cloudinary
+         --> socketio
