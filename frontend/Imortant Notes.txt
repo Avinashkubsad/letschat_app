@@ -2,4 +2,4 @@
     npm create vite@latest.
      --> React
      --> using Javascript 
-     
+     --> nom install       // to get the dependencies
