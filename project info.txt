@@ -1,0 +1,16 @@
+# letschat_app
+
+MONGODB 2 collections 
+* users
+* messages
+
+
+1. users => 1. Fullname
+            2. email
+            3. password
+            4. profilepic
+
+2. messages => 1. senderid
+               2. Receiverid
+               3.text.
+               4.image
