@@ -1,16 +1,25 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const UserSchema = new moongoose.Schema(
-    {
-        email:{
-            type: String,
-            required:true,
-            unique:true,
-        },
-        fullname:{
-            type: String,
-            required: true,
-        },
-        
-    }
-)
+  {
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    fullname: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+      minlength: 6,
+    },
+    profilepic: {
+      type: String,
+      default: "",
+    },
+  },
+  { timeStamps: true }
+);
