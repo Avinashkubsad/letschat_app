@@ -23,3 +23,8 @@ const UserSchema = new moongoose.Schema(
   },
   { timeStamps: true }
 );
+
+
+const User = mongoose.model("User", UserSchema);
+
+export default User;

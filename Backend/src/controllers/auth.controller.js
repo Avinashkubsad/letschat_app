@@ -1,6 +1,6 @@
 export const signup = (req,res) =>{
-      res.send("signup router");
-
+   const {fullName,email,password} = req.body
+ 
 }
 
 
