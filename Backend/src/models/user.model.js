@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const UserSchema = new moongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,
       required: true,
       unique: true,
     },
-    fullname: {
+    fullName: {
       type: String,
       required: true,
     },
@@ -16,7 +16,7 @@ const UserSchema = new moongoose.Schema(
       required: true,
       minlength: 6,
     },
-    profilepic: {
+    profilePic: {
       type: String,
       default: "",
     },
