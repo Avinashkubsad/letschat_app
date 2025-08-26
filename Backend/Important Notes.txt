@@ -10,3 +10,7 @@
          --> cloudinary
          --> socketio
          --> nodemon -D  (dev dependies)
+
+
+2. Token generation 
+       --> using salt and hash
