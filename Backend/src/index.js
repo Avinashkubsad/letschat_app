@@ -12,12 +12,11 @@ const app = express(); //  Calling express() creates an Express application inst
 
 
 const PORT = process.env.PORT;
-console.log("port",PORT)
+console.log(" app running on port",PORT)
 
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
-  console.log("app is runing on port 5001");
   connectDB();
 });
