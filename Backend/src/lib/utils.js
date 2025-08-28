@@ -15,5 +15,3 @@ export const generateToken= (userId,res) => {
 
   return token;
 }
-
-console .log("token",token)
