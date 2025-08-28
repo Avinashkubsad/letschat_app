@@ -48,7 +48,11 @@ export const signup = async (req, res) => {
 };
 
 export const login = (req, res) => {
-  res.send("signup router");
+  try{
+
+  }catch{
+    
+  }
 };
 
 export const logout = (req, res) => {
