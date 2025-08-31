@@ -16,3 +16,4 @@
        --> using salt and hash
        --> when token is generated the token is sent in cookies
        --> token expires in 7 days 
+       --> using inbiilt function bcryptjs 
