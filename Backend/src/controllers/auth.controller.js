@@ -61,6 +61,14 @@ export const logink = (req, res) => {
     
   }
 };
+export const loginlk = (req, res) => {
+  try{
+   console.log("logic for login")
+  }catch{
+    
+  }
+};
+
 
 export const logout = (req, res) => {
   res.send("signup router");
