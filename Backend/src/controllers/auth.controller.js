@@ -49,7 +49,14 @@ export const signup = async (req, res) => {
 
 export const login = (req, res) => {
   try{
-
+   console.log("logic for login")
+  }catch{
+    
+  }
+};
+export const logink = (req, res) => {
+  try{
+   console.log("logic for login")
   }catch{
     
   }
