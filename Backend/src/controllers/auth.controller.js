@@ -51,13 +51,15 @@ export const login = async(req, res) => {
   const {email,password} = req.body
   try{
    const user = await User.findOne({email})
-   if(!User){
+   if(!user){
+    console.log("Invalid credentials")
     return res.status(400).json({message:"Invalid Credentials"});
    } 
 
    const isPasswordCorrect = await bcrypt.compare(password,user.password);
 
    if(!isPasswordCorrect){
+    console.log("Invalid credentials")
     return res.status(400).json({message:"Invalid Credentials"});
    }
 
@@ -69,7 +71,7 @@ export const login = async(req, res) => {
     email:user.email,
     profilePic:user.profilePic
    })
-  }catch{
+  }catch(error){
     console.log("Error in login logic",error.message);
     res.status(500).json({message:"Internal server error"});
     
@@ -80,5 +82,12 @@ export const login = async(req, res) => {
 
 
 export const logout = (req, res) => {
-  res.send("signup router");
+  try{
+    res.cookie("jwt","",{maxAge:0})   // 0 means it will logout immediately
+    res.status(200).json({message:"Logged out Successfully"});
+  }catch(error){
+      console.log("Error in logout logic",error.message);
+    res.status(500).json({message:"Internal server error"})
+
+  }
 };
