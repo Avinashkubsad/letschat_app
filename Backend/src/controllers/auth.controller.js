@@ -70,23 +70,13 @@ export const login = async(req, res) => {
     profilePic:user.profilePic
    })
   }catch{
+    console.log("Error in login logic",error.message);
+    res.status(500).json({message:"Internal server error"});
     
   }
 };
-export const logink = (req, res) => {
-  try{
-   console.log("logic for login")
-  }catch{
-    
-  }
-};
-export const loginlk = (req, res) => {
-  try{
-   console.log("logic for login")
-  }catch{
-    
-  }
-};
+
+
 
 
 export const logout = (req, res) => {
