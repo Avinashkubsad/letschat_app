@@ -54,6 +54,21 @@ export const login = async(req, res) => {
    if(!User){
     return res.status(400).json({message:"Invalid Credentials"});
    } 
+
+   const isPasswordCorrect = await bcrypt.compare(password,user.password);
+
+   if(!isPasswordCorrect){
+    return res.status(400).json({message:"Invalid Credentials"});
+   }
+
+   generateToken(user._id,res);
+
+   res.status(200).json({
+    _id:user._id,
+    fullName:user.fullName,
+    email:user.email,
+    profilePic:user.profilePic
+   })
   }catch{
     
   }
