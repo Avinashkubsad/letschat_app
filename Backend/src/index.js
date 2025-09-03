@@ -4,6 +4,7 @@ import express from "express";
 import dotenv from "dotenv";
 import authRoutes from "./routes/auth.route.js";
 import { connectDB } from "./lib/db.js";
+import cookieParser from "cookies-parser";
 
 dotenv.config();
 const app = express(); //  Calling express() creates an Express application instance.
@@ -16,6 +17,7 @@ console.log(" app running on port",PORT)
 
 app.use(express.json());
 app.use("/api/auth", authRoutes);
+app.use(cookieParser());
 
 app.listen(PORT, () => {
   connectDB();
