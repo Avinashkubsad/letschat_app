@@ -25,6 +25,7 @@ export const protectRoute =async (req,res,next) =>{
       next()
     }catch(error){
         console.log("error in auth middleware",err);
+        res.status(500).json({message:"Internal server Error"});
 
     }
 
