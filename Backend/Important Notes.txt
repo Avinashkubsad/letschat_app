@@ -22,11 +22,22 @@
       --> using email & password
       --> generate token and return the user info
 
-4. update
+4. signup
+      --> fullname email & password
+
+5. logout
+      --> using jwt token maxAge      
+
+6. update
       --> update profilepic use put method
       --> first check whether the user is loged in or not using protectRoute
       --> in protect Route check token if token is present then decode it.
       --> token decode(token,and jwt secrect key).
       --> token uses cookie-parser (inbuilt function) to parser jwt 
       --> login into cloudinary & then configure it in lib
+      --> when update function is called  first it is uploaded to cloudinary  using uploadresponse then 
+      --> using uploadresponse  it gives the secured_url
+      --> using that url we will update the profile profilepic
 
+7.check 
+      --> check user is autheticated or not
