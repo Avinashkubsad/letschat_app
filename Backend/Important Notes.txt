@@ -27,5 +27,6 @@
       --> first check whether the user is loged in or not using protectRoute
       --> in protect Route check token if token is present then decode it.
       --> token decode(token,and jwt secrect key).
+      --> token uses cookie-parser (inbuilt function) to parser jwt 
 
 
