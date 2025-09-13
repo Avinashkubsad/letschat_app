@@ -43,3 +43,35 @@
       --> check user is autheticated or not
       --> this is usefull whenever we refresh the application it checks whether the user is authenticated or not  
       --> depending on that we are takin them to profile page or login page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** Schemas ***
+
+1. User schema contains  
+   --> email
+   --> fullname
+   --> password
+   --> profilePic
+
+
+2. Message schema contains
+   --> senderId
+   --> ReceiverId
+   --> text
+   --> Image
+
+
+   
