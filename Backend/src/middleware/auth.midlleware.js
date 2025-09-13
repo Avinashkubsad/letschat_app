@@ -1,30 +1,29 @@
-import jwt from "jsonwebtoken"
-import User from "../models/user.model.js"
+import jwt from "jsonwebtoken";
+import User from "../models/user.model.js";
 
-export const protectRoute =async (req,res,next) =>{
-    try{
-      const token = req.cookies.jwt 
-      if(!token){
-        return res.status(401).json({message: "unauthorized - No token Provided"})
-      }
-      const decoded = jwt.verify(token,process.env.JWT_SECRET)
+export const protectRoute = async (req, res, next) => {
+    try {
+        const token = req.cookies.jwt;
+        if (!token) {
+            return res.status(401).json({ message: "Unauthorized - No token provided" });
+        }
 
-      if(decoded){
-        return res.status(401).json({message: "Unauthorized -- Invalid token"})
-      }
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-      const user = await User.findById(decoded.userId).select("-password");
-      if(!user){
-        return res.status(404).json({message: "User not found"})
-      }
+        if (!decoded) {  // ✅ Check if decoded is falsy, not if it exists
+            return res.status(401).json({ message: "Unauthorized - Invalid token" });
+        }
 
-      req.user = user
+        const user = await User.findById(decoded.userId).select("-password");
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
 
-      next()
-    }catch(error){
-        console.log("error in auth middleware",err);
-        res.status(500).json({message:"Internal server Error"});
+        req.user = user;
 
+        next();
+    } catch (error) {   // ✅ Use 'error' here, not 'err'
+        console.error("Error in auth middleware:", error);
+        res.status(500).json({ message: "Internal server error" });
     }
-
-}
+};

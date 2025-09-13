@@ -41,3 +41,5 @@
 
 7.check 
       --> check user is autheticated or not
+      --> this is usefull whenever we refresh the application it checks whether the user is authenticated or not  
+      --> depending on that we are takin them to profile page or login page

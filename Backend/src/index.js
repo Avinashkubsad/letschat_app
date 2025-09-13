@@ -6,6 +6,7 @@ import authRoutes from "./routes/auth.route.js";
 import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
 
+
 dotenv.config();
 const app = express(); //  Calling express() creates an Express application instance.
 //This app object is what you’ll use to define routes (like app.get("/"...)),
