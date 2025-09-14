@@ -47,9 +47,10 @@
 
 8. messages 
       --> getUsersforSidebar is used to show all the users in the side bar
-      --> can get this by using/fetching loggedin user 
+      --> can get this by using/fetching loggedin userId 
+      --> filter by means excluding current loggedIn userid
 
-
+   * --> getMessages using by id
 
 
 
