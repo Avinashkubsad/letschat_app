@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.route.js";
-import messageRoutesRoutes from "./routes/message.route.js";
+import messageRoutes from "./routes/message.route.js";
 
 
 
