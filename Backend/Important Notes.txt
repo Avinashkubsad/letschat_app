@@ -45,6 +45,9 @@
       --> depending on that we are takin them to profile page or login page
 
 
+8. messages 
+      --> getUsersforSidebar is used to show all the users in the side bar
+      --> can get this by using/fetching loggedin user 
 
 
 
