@@ -34,3 +34,15 @@ export const getMessages = async (req, res) => {
     res.status(500).json({ err: "Internal server Error" });
   }
 };
+
+//here while sending message   it can be anything like message /profile picture
+export const sendMessage = (req,res) =>{
+  try{
+   const {text , image}= req.body;
+   const { id:receiverId} =req.params;
+   const senderId = req.user._id;
+   
+  }catch{
+
+  }
+}
