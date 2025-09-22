@@ -2,3 +2,4 @@
 
 1. what is nodejs?
 2. when user hits the button multiply times how/ which method do you use to stop him
+3. what is process.nextick() & settimeout
