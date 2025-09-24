@@ -36,11 +36,18 @@ export const getMessages = async (req, res) => {
 };
 
 //here while sending message   it can be anything like message /profile picture
-export const sendMessage = (req,res) =>{
+export const sendMessage =  async (req,res) =>{
   try{
    const {text , image}= req.body;
    const { id:receiverId} =req.params;     //settting  id as receiverid
    const senderId = req.user._id;   //me
+
+   let imageUrl;
+   if(image){
+    //upload the image to cloudinary
+    const uploadResponse = await cloudinary.uploader.upload(image);
+    imageUrl = uploadResponse.secure_url;
+   }
    
   }catch{
 
