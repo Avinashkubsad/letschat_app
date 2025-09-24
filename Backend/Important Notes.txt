@@ -52,6 +52,10 @@
 
    * --> getMessages using by id
      --> adding filter to get messages btw two users 
+
+
+
+     --> sendmessages it can be message or image & it should be protected
      
      
 
