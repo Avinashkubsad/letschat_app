@@ -49,7 +49,20 @@ export const sendMessage =  async (req,res) =>{
     imageUrl = uploadResponse.secure_url;
    }
    
-  }catch{
 
+   const newMessage = new Message({
+    senderId,
+    receiverId,
+    text,
+    image: imageUrl,
+   })
+
+
+   await newMessage.save();
+
+   res.status(201).json(newMessage)
+  }catch{
+    console.log("Error sending the message ",err.Message);
+  res.status(500).json({ error : "Internal server error"});
   }
 }
