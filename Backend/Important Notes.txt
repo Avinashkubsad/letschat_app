@@ -57,6 +57,11 @@
 
      --> sendmessages it can be message or image & it should be protected
      --> check if image then upload it to the cloudinary
+     --> if message  then it has senderId and receiverId 
+     --> save it into monogdb * senderId
+                              * receiverId
+                              * text
+                              * image 
      
      
 

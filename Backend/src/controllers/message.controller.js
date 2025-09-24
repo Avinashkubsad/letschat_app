@@ -60,6 +60,8 @@ export const sendMessage =  async (req,res) =>{
 
    await newMessage.save();
 
+
+   //implement socketio for real time  messaging
    res.status(201).json(newMessage)
   }catch{
     console.log("Error sending the message ",err.Message);
