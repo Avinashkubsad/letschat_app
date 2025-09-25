@@ -2,4 +2,6 @@
     npm create vite@latest.
      --> React
      --> using Javascript 
-     --> nom install       // to get the dependencies
+     --> npm install       // to get the dependencies
+     --> install react-router-dom    //paging & routing
+     --> react-hot-toast // to show notification
