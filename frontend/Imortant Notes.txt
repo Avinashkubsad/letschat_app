@@ -7,3 +7,4 @@
      --> react-hot-toast // to show notification
      --> for boiler plate install extension lie Es7 
      --> tailwind css extension
+     
