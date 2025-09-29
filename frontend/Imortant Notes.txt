@@ -6,6 +6,6 @@
      --> install react-router-dom    //paging & routing
      --> react-hot-toast // to show notification
      --> for boiler plate install extension lie Es7 
-     --> tailwind css extension
-     
+     --> tailwind css extension ( tailwindcss Intellisense)
+     --> also use daisy ui for components
      
