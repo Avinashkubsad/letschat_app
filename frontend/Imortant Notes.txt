@@ -14,3 +14,5 @@
      --> install Daisyui and config it in tailwind.config.js
      
 3. create folder of components & pages     
+   --> creatings pages of login,home,signup,settings,profilepage
+   -->
