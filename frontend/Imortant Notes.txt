@@ -7,5 +7,9 @@
      --> react-hot-toast // to show notification
      --> for boiler plate install extension lie Es7 
      --> tailwind css extension ( tailwindcss Intellisense)
+
+
+2.  Daisyui for components     
      --> also use daisy ui for components
+     --> install Daisyui and config it in tailwind.config.js
      
