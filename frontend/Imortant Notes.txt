@@ -13,3 +13,4 @@
      --> also use daisy ui for components
      --> install Daisyui and config it in tailwind.config.js
      
+3. create folder of components & pages     
