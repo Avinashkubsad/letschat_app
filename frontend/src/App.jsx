@@ -14,8 +14,8 @@ import { Routes, Route } from "react-router-dom";
 
 const App = () => (
   <div>
-    <Navbar /> // ← Always visible 
-    <Routes>  // ← Only renders the matched route
+    <Navbar /> {/* Always visible */} 
+    <Routes> {/* Only renders the matched route */}
       <Route path="/" element={<HomePage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/login" element={<LogInPage />} />
