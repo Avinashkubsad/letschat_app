@@ -1,5 +1,5 @@
 import User from "../models/user.model.js";
-import Message from "../models/message.model.js";
+import Message from "../models/messages.model.js";
 
 export const getUsersforSidebar = async (req, res) => {
   try {
