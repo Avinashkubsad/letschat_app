@@ -17,7 +17,8 @@
    --> creatings pages of login,home,signup,settings,profilepage
    
 
-4. creating signup page 
+4. axios instance  (//create a instance so that we can use throught our application  )
    --> install dependecies like axios & zustand(Zustand (German for “state”) is a small, fast, and scalable state management solution.
      It helps manage global state (data shared across multiple components) without the boilerplate of Redux or Context API.
      It uses React hooks internally, so you get a simple and modern API.)   
+   -->   
