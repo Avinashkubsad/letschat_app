@@ -21,4 +21,11 @@
    --> install dependecies like axios & zustand(Zustand (German for “state”) is a small, fast, and scalable state management solution.
      It helps manage global state (data shared across multiple components) without the boilerplate of Redux or Context API.
      It uses React hooks internally, so you get a simple and modern API.)   
-   -->   
+   
+5. useAuthStore
+   -->  use useAuthStore we can use it anywhere in different files && by callng the hooks & destructuring   
+   -->  main use is create it in one place and use in different components
+     ex -->  const {authUser}= useAuthStore()   // destructuring the auth user
+   --> in stores it will be having bunch of loading states like authUser,issigningup,isloggingingin,isupdatingProfile,isCheckingAuth
+
+   --> 1. ischeckingAuth -- is used to chek when it is refreshing the page 

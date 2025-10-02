@@ -1,0 +1,29 @@
+1.  Why useEffect is this?
+    👉 It is React’s built-in useEffect hook from react.
+       There’s only one useEffect in React — but you can use it in different ways depending on the dependency array:
+
+          *** useEffect(() => { ... }, []) → runs once after initial render.
+          *** useEffect(() => { ... }, [someState]) → runs on mount + whenever someState changes.
+          *** useEffect(() => { ... }) (no dependencies) → runs on every render.
+
+          In your case:
+               [checkAuth] means → run on mount, and if the checkAuth function reference ever changes.
+
+
+               **use case or how it is used**
+               Exactly ✅ — that’s the purpose of your useEffect(() => { checkAuth() }, []).
+
+               1.Here’s the flow when you refresh the page:
+               2.Your React app reloads → all in-memory state is reset.
+               3.useAuthStore() gives you the store state. At this moment, authUser is probably null (or some default).
+               4.The component mounts → useEffect runs → it calls checkAuth().
+               5.checkAuth() (usually) will:
+               6.Look for a token in localStorage / cookies.
+               7.If token exists → verify it (maybe by calling an API).
+               8.If valid → update the Zustand store with authUser info.
+               9.If invalid → clear user state.
+
+                 Your component re-renders → now authUser contains the authenticated user (or still null if not logged in).
+                 So yes — every page refresh triggers checkAuth, which makes sure the user is either:
+                 ✅ Authenticated (store gets updated with user info), or
+                 ❌ Not authenticated (store stays empty / authUser = null).
