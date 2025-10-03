@@ -29,3 +29,9 @@
    --> in stores it will be having bunch of loading states like authUser,issigningup,isloggingingin,isupdatingProfile,isCheckingAuth
 
    --> 1. ischeckingAuth -- is used to chek when it is refreshing the page 
+   --> 2. while checking the autUser we can show (loading/Loader) icon importing it from lucide-react
+
+
+6 . in App.js files
+   -->  if user is not loggedin then redirect him o login page     
+   --> 
