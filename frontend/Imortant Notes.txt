@@ -35,3 +35,5 @@
 6 . in App.js files
    -->  if user is not loggedin then redirect him o login page     
    --> 
+
+7.    
