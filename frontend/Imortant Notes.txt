@@ -38,4 +38,4 @@
 
 7.   created a separate components so that to display AuthImage Pattern 
 
-8.     in AUthstor.js calling the api of signup method
+8.   In AUthstor.js calling the api of signup method and logout method
