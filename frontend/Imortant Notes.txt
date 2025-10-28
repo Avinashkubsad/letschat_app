@@ -39,3 +39,9 @@
 7.   created a separate components so that to display AuthImage Pattern 
 
 8.   In AUthstor.js calling the api of signup method and logout method
+      here login and sign have same code used   but changes required in the useauthsrore to call differnet api
+
+9. in profilepage only proile pic should be edit because that is what we have implemented in backend
+   rest other fields in the profilepage should be read only.
+    while uploading the profile pic it will take some time to upload into cloudinary and update the database.
+
